@@ -2,3 +2,8 @@ services:
   web:
     build:
       context: .
+    networks:
+      - nginx_bridge
+networks:
+  nginx_bridge:
+    external: true
